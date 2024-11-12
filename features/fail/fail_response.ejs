@@ -1,0 +1,39 @@
+{
+    "predicates":[
+       {
+          "and":[
+             {
+                "equals":{
+                   "path":"/v1/api/test",
+                   "method":"GET"
+                }
+             },
+             {
+                "matches":{
+                   "body":{
+                      "somedata":{
+                         "code":"E202"
+                      }
+                   }
+                }
+             }
+          ]
+       }
+    ],
+    "responses":[
+       {
+          "is":{
+             "statusCode":500,
+             "headers":{
+                "Content-Type":"application/json"
+             },
+             "body":{
+                "status":500,
+                "return_code":"E0001",
+                "user_message":"failure"
+             }
+          }
+       }
+    ]
+}
+

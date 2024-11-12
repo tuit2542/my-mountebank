@@ -1,0 +1,61 @@
+{
+    "predicates":[
+       {
+          "and":[
+             {
+                "equals":{
+                   "path":"/v1/api/test",
+                   "method":"GET"
+                }
+             },
+             {
+                "matches":{
+                   "body":{
+                      "somedata":{
+                         "code":"E201"
+                      }
+                   }
+                }
+             }
+          ]
+       }
+    ],
+    "responses":[
+       {
+          "is":{
+             "statusCode":200,
+             "headers":{
+                "Content-Type":"application/json"
+             },
+             "body":{
+                "status":200,
+                "return_code":"E0001",
+                "message": "Data retrieved successfully.", 
+                "data": { 
+                    "userId": 12345, 
+                    "userName": "john_doe", 
+                    "email": "john.doe@example.com", 
+                    "profile": { 
+                        "firstName": "John", 
+                        "lastName": "Doe", 
+                        "age": 30, 
+                        "gender": "male", 
+                        "location": "New York, NY" 
+                    }, 
+                    "settings": { 
+                        "notifications": true, 
+                        "darkMode": false, 
+                        "language": "en" 
+                    }, 
+                    "statistics": { 
+                        "posts": 15, 
+                        "followers": 120, 
+                        "following": 80 
+                    } 
+                }, 
+                "timestamp": "2024-11-12T13:00:00Z" 
+            }
+          }
+       }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "imposters": [{
+     "port": "6969", 
+     "protocol": "http", 
+     "name": "features", 
+     "stubs": [
+      <% include features/success/success_response.ejs %>,
+     <% include features/fail/fail_response.ejs %>,
+     {
+      "responses": [ <% include proxy.ejs %> ]
+     }]
+    }]
+}
