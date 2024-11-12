@@ -20,5 +20,5 @@
 2. to use this project
 
     ```console
-    foo@bar:~$ mb --configfile imposters.ejs --allowInjection mb --configfile imposters.ejs --allowInjection
+    foo@bar:~$ mb --configfile imposters.ejs --allowInjection
     ```
